@@ -650,6 +650,14 @@ control caches using the `Cache-Control` header. Add support for this
 header, specifically for `no-store` and `max-age` values. If the
 header contains some other value, it's best not to cache the response.
 
+*Other data schemes* In addition to HTTP and HTTP, there are other
+protocols. *view-source* is one example;
+navigating in a real browser to `view-source:browser.engineering/http.html`
+shows the HTML source of this chapter. Another protocol is *data*, which
+allow inlining HTML content into the URL itself. Try navigating to
+`data:text/html,Hello world!` to see. Add support for the view-source
+and data schemes.
+
 [^5]: On some systems, you can run `dig +short example.org` to do this
     conversion yourself.
 
